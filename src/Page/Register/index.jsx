@@ -34,7 +34,7 @@ const Register = (props) => {
       <div className="row">
         <div className="col-8"></div>
         <div className="col-4 p-4">
-          <h4>Silahkan Registrasi</h4>
+          <h4>Form Registrasi</h4>
           <form onSubmit={onSubmit}>
             <Input
               onChange={(e) => {
@@ -61,7 +61,7 @@ const Register = (props) => {
           </form>
           <div className="row mt-3">
             <div className="col">
-              <Link to="/login">Back to login</Link>
+              <Link to="/login">Login</Link>
             </div>
           </div>
           <div className="col">

@@ -10,6 +10,9 @@ import ProtectedRoute from "./Component/ProtectedRoute";
 import ProtectedLogin from "./Component/ProtectedLogin";
 import Login from "./Page/Login";
 import Register from "./Page/Register";
+import NotFound from "./Page/NotFound";
+import Corona from "./Page/Corona";
+
 export default function App() {
   return (
     <div className="App">
@@ -30,9 +33,19 @@ export default function App() {
               <Contact />
             </Navbar>
           </Route>
-          <Route path="/DetailUser/:id" component={DetailUser} />
+          <Route path="/corona">
+            <Navbar>
+              <Corona />
+            </Navbar>
+          </Route>
+          <ProtectedRoute path="/DetailUser/:id" component={DetailUser} />
           <ProtectedLogin path="/login" component={Login} />
           <ProtectedLogin path="/register" component={Register} />
+          <Route>
+            <Navbar>
+              <NotFound />
+            </Navbar>
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

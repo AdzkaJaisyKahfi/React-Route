@@ -2,9 +2,10 @@ import React from "react";
 import Axios from "axios";
 import Navbar from "../../Page/Navbar";
 import { config } from "../../config";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 
 const DetailUser = (props) => {
+  let history = useHistory();
   let { id } = useParams();
   const [user, setUser] = React.useState([]);
   React.useEffect(() => {
@@ -22,13 +23,13 @@ const DetailUser = (props) => {
 
   const NextHandle = () => {
     let nextId = parseInt(id, 10) + 1;
-    props.history.push(`/DetailUser/${nextId}`);
+    history.push(`/DetailUser/${nextId}`);
     console.log(nextId);
   };
 
   const PrevHandle = () => {
     let prevId = parseInt(id, 10) - 1;
-    props.history.push(`/DetailUser/${prevId}`);
+    history.push(`/DetailUser/${prevId}`);
     console.log(prevId);
   };
 

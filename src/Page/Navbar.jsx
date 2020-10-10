@@ -37,12 +37,16 @@ const Navbar = ({ children }) => {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item"></li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/corona">
+                  Data Corona
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div className="mt-4">{children}</div>
+      <div className="mt-3">{children}</div>
     </React.Fragment>
   );
 };
