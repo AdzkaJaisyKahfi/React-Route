@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <div className="container">
-        <table className="table table-responsive table-bordered table-striped">
+        <table className="table table-responsive table-bordered table-striped mt-2">
           <thead>
             <tr>
               <th>No</th>
