@@ -12,6 +12,38 @@ import Login from "./Page/Login";
 import Register from "./Page/Register";
 import NotFound from "./Page/NotFound";
 import Corona from "./Page/Corona";
+import { createStore } from "redux";
+// import reducer, { initialState } from "./React-Context/Reducer";
+// import { StateProvider } from "./React-Context/StateProvider";
+
+//Reducer adalah suatu fungsi yang bisa mengupdate store, reducer menerima dua parameter yaitu state dan action
+const counterReducer = (state = 0, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return state + 1;
+    case "DECREMENT":
+      return state - 1;
+  }
+};
+
+//Store, store ini adalah tempat untuk menyimpan state yang akan diakses oleh komponen
+let store = createStore(counterReducer);
+
+//Dispatch merupakan actions yang dipacu oleh user
+const increment = () => {
+  return { type: "INCREMENT" };
+};
+const decrement = () => {
+  return { type: "DECREMENT" };
+};
+
+store.dispatch(increment());
+
+//View/Subscription yaitu state yang ditampilkan oleh komponen
+store.subscribe(() => {
+  console.log("nilai state", store.getState());
+});
+console.log("state saat ini", store.getState());
 
 export default function App() {
   return (
