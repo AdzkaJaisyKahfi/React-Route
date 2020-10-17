@@ -1,13 +1,17 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProtectedRoute = ({ children, ...rest }) => {
   const [auth, setAuth] = React.useState(false);
+  const login = useSelector((state) => state.auth);
 
+  console.log(auth);
   React.useMemo(() => {
-    if (localStorage.getItem("token")) {
-      setAuth(true);
-    }
+    setAuth(login);
+    // if (localStorage.getItem("token")) {
+    //   setAuth(true);
+    // }
   }, [auth]);
 
   return (

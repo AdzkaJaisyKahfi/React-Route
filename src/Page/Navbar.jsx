@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = ({ children }) => {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             Navbar
@@ -45,6 +45,12 @@ const Navbar = ({ children }) => {
             </ul>
           </div>
         </div>
+        <img
+          className="mr-2"
+          src="https://www.flaticon.com/premium-icon/icons/svg/373/373582.svg"
+          width="40"
+          alt=""
+        />
       </nav>
       <div className="mt-3">{children}</div>
     </React.Fragment>

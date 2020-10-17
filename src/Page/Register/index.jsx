@@ -32,40 +32,61 @@ const Register = (props) => {
   return (
     <React.Fragment>
       <div className="row">
-        <div className="col-8"></div>
-        <div className="col-4 p-4">
-          <h4>Form Registrasi</h4>
-          <form onSubmit={onSubmit}>
-            <Input
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-              value={email}
-              type="email"
-              label={"Email Address"}
-              className="form-control"
-            />
-            <Input
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-              type="password"
-              label={"Password"}
-              value={password}
-              className="form-control"
-            />
-            <Button
-              className="form-control btn btn-success"
-              label={"Register"}
-            />
-          </form>
-          <div className="row mt-3">
-            <div className="col">
-              <Link to="/login">Login</Link>
+        <div className="d-flex justify-content-center mt-3">
+          <div class="card border-success">
+            <div class="card-header bg-transparent border-success text-success">
+              Form Registrasi
             </div>
-          </div>
-          <div className="col">
-            <Link to="/about">About</Link>
+            <div class="card-body text-success">
+              <h5 class="card-title">
+                <form onSubmit={onSubmit}>
+                  <Input
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    value={email}
+                    type="email"
+                    label={"Email Address"}
+                    className="form-control"
+                  />
+                  <Input
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                    type="password"
+                    label={"Password"}
+                    value={password}
+                    className="form-control"
+                  />
+                  <Button
+                    className="form-control btn btn-success"
+                    label={"Register"}
+                  />
+                </form>
+              </h5>
+              <p class="card-text">
+                <div className="col">
+                  <Link
+                    to="/login"
+                    style={{
+                      textDecoration: "none"
+                    }}
+                  >
+                    Login
+                  </Link>
+                </div>
+                <div className="col">
+                  <Link
+                    to="/about"
+                    style={{
+                      textDecoration: "none"
+                    }}
+                  >
+                    About
+                  </Link>
+                </div>
+              </p>
+            </div>
           </div>
         </div>
       </div>
