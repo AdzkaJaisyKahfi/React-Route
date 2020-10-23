@@ -1,6 +1,6 @@
 const initialState = {
   auth: false,
-  avatar: "https://www.flaticon.com/premium-icon/icons/svg/373/373582.svg"
+  avatar: "https://www.flaticon.com/premium-icon/icons/svg/3177/3177440.svg"
 };
 const authReducers = (state = initialState, action) => {
   switch (action.type) {
@@ -13,7 +13,9 @@ const authReducers = (state = initialState, action) => {
     case "LOGOUT":
       return {
         ...state,
-        auth: false
+        auth: false,
+        avatar:
+          "https://www.flaticon.com/premium-icon/icons/svg/3177/3177440.svg"
       };
     default:
       return {

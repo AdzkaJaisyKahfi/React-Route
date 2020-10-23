@@ -33,26 +33,28 @@ const Login = () => {
                 </form>
               </h5>
               <p class="card-text">
-                <div className="col">
-                  <Link
-                    to="/register"
-                    style={{
-                      textDecoration: "none",
-                      color: ""
-                    }}
-                  >
-                    Register
-                  </Link>
-                </div>
-                <div className="col">
-                  <Link
-                    to="/about"
-                    style={{
-                      textDecoration: "none"
-                    }}
-                  >
-                    About
-                  </Link>
+                <div className="row">
+                  <div className="col">
+                    <Link
+                      to="/register"
+                      style={{
+                        textDecoration: "none",
+                        color: ""
+                      }}
+                    >
+                      Register
+                    </Link>
+                  </div>
+                  <div className="col">
+                    <Link
+                      to="/about"
+                      style={{
+                        textDecoration: "none"
+                      }}
+                    >
+                      About
+                    </Link>
+                  </div>
                 </div>
               </p>
             </div>

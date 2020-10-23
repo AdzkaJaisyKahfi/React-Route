@@ -65,25 +65,27 @@ const Register = (props) => {
                 </form>
               </h5>
               <p class="card-text">
-                <div className="col">
-                  <Link
-                    to="/login"
-                    style={{
-                      textDecoration: "none"
-                    }}
-                  >
-                    Login
-                  </Link>
-                </div>
-                <div className="col">
-                  <Link
-                    to="/about"
-                    style={{
-                      textDecoration: "none"
-                    }}
-                  >
-                    About
-                  </Link>
+                <div className="row">
+                  <div className="col">
+                    <Link
+                      to="/login"
+                      style={{
+                        textDecoration: "none"
+                      }}
+                    >
+                      Login
+                    </Link>
+                  </div>
+                  <div className="col">
+                    <Link
+                      to="/about"
+                      style={{
+                        textDecoration: "none"
+                      }}
+                    >
+                      About
+                    </Link>
+                  </div>
                 </div>
               </p>
             </div>

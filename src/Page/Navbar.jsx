@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../redux/actions";
 
 const Navbar = ({ children }) => {
+  const avatar = useSelector((state) => state.avatar);
+  const dispatch = useDispatch();
+  const logoutHandle = () => {
+    dispatch(logout());
+  };
+
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
@@ -44,10 +52,14 @@ const Navbar = ({ children }) => {
               </li>
             </ul>
           </div>
+          <button onClick={logoutHandle} className="btn border-0 text-white">
+            Logout
+          </button>
         </div>
         <img
-          className="mr-2"
-          src="https://www.flaticon.com/premium-icon/icons/svg/373/373582.svg"
+          className="mr-2 rounded-circle"
+          src={avatar}
+          height="40"
           width="40"
           alt=""
         />
